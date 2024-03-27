@@ -1,0 +1,73 @@
+#app {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    h2 {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-inline: auto;
+        width: var(--cont-l);
+        height: 100%;
+
+        padding-bottom: 3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+
+        .stats {
+            grid-row: span 2;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto 60px repeat(2, 1fr);
+            gap: 1rem;
+
+            h2 {
+                grid-column: span 2;
+            }
+
+            .global {
+                grid-column: span 2;
+                display: grid;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+
+                font-size: 14px;
+
+                span {
+                    margin-left: 0.25rem;
+                    font-weight: 700;
+                }
+
+                p + p {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        .graphs {
+            width: 100%;
+            height: 200px;
+
+            display: grid;
+            grid-template-rows: auto 1fr;
+            row-gap: 2rem;
+
+            .graph-wrap {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
